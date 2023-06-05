@@ -16,10 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('product_id');
 
             $table->foreign('product_id')->references('id')->on('products')->cascadeOnDelete()->restrictOnUpdate();
-            
+
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->timestamps();
+           
         });
     }
 
